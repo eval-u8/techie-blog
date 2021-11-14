@@ -10,6 +10,13 @@ router.get("/", (req, res) => {
             "post_text",
             "created_at"
         ],
+        order: [["created_at", "DESC"]],
+        include: [
+            {
+                model: User,
+                attributes: ["username", "id"],
+            },
+        ],
     })
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
@@ -40,6 +47,7 @@ router.get("/post/:id", (req, res) => {
         },
         attributes: [
             "id",
+            "post_text",
             "title",
             "created_at",
         ],
@@ -70,10 +78,8 @@ router.get("/post/:id", (req, res) => {
                 return;
             }
 
-            // serialize the data
             const post = dbPostData.get({ plain: true });
 
-            // pass data to template
             res.render("single-post", {
                 post,
                 loggedIn: req.session.loggedIn,
