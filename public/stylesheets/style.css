@@ -187,7 +187,7 @@ input {
     border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
 
-.card-header a:visited {
+.card-header a{
     color: #c0d4c7;
 }
 
