@@ -4,7 +4,6 @@ const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, (req, res) => {
-
     console.log("======================");
     Post.findAll({
         where: {
@@ -13,6 +12,7 @@ router.get("/", withAuth, (req, res) => {
         attributes: [
             "id",
             "title",
+            "post_text",
             "created_at",
         ],
         include: [
@@ -47,13 +47,11 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.get("/edit/:id", withAuth, (req, res) => {
-    Post.findByPk(req.params.id, {
-        attributes: [
-            "id",
-            "post_text",
-            "title",
-            "created_at",
-        ],
+    Post.findOne({
+        where: {
+            id: req.params.id,
+        },
+        attributes: ["id", "post_text", "title", "created_at"],
         include: [
             {
                 model: Comment,
@@ -90,6 +88,10 @@ router.get("/edit/:id", withAuth, (req, res) => {
         .catch((err) => {
             res.status(500).json(err);
         });
+});
+
+router.get("/newpost", (req, res) => {
+    res.render("new-post");
 });
 
 module.exports = router;

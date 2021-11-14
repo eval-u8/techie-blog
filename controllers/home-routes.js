@@ -7,11 +7,11 @@ router.get("/", (req, res) => {
         attributes: [
             "id",
             "title",
+            "post_text",
             "created_at"
         ],
     })
         .then((dbPostData) => {
-            // pass a single post object into the homepage
             const posts = dbPostData.map((post) => post.get({ plain: true }));
             res.render("homepage", {
                 posts,
