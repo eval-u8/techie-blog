@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Express-purple" >
 </p>
 
-# Techies... the blog 🧑🏻‍💻
+# Techies... the blog... not the hero. 🧑🏻‍💻
 
 Techies is a technology-oriented blog (a-la-reddit) where multiple users can create blog-posts to share with the community.
 
@@ -20,6 +20,8 @@ Techies is a technology-oriented blog (a-la-reddit) where multiple users can cre
 The posts created can be edited and deleted from the dashboard.
 
 The logged in session will automatically log out after a couple of minutes for your safety.
+
+*NOTE* The password for your account must be at least 8 characters long, otherwise you'll get an error.
 
 
 ## Preview 👀 
