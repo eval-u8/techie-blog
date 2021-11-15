@@ -24,6 +24,7 @@ The logged in session will automatically log out after a couple of minutes for y
 
 ## Preview 👀 
 
+[Click here to go to Techies](https://quiet-plains-39124.herokuapp.com/)
 ![Preview](assets/preview.png)
 
 
