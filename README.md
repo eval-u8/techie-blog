@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Express-purple" >
 </p>
 
-# Techies... the blog... not the hero. 🧑🏻‍💻
+# Techies... the blog... not the [hero](https://www.dota2.com/hero/techies). 🧑🏻‍💻
 
 Techies is a technology-oriented blog (a-la-reddit) where multiple users can create blog-posts to share with the community.
 
